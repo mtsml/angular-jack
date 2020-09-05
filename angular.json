@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-jack"
+    }
+  },
+  "defaultProject": "angular-jack",
+  "cli": {
+    "analytics": false
+  }
 }

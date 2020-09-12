@@ -28,17 +28,13 @@ export class ChannelComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.getChannelId()
+        this.getChannelInfo()
         this.getVideoList()
     }
 
-    getChannelId() {
+    getChannelInfo() {
         this.channel_id = this.route.snapshot.paramMap.get('channel_id');
-        this.channels.map(channel => {
-            if (channel.channel_id = this.channel_id) {
-                this.channel_nm = channel.channel_nm
-            }
-        })
+        this.channel_nm = this.channels.find(channel => channel.channel_id === this.channel_id).channel_nm;
     }
 
     getVideoList() {

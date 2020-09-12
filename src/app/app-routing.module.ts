@@ -5,7 +5,7 @@ import { ChannelComponent } from './channel/channel.component';
 
 const routes: Routes = [
     { path: '', component: IndexComponent },
-    { path: ':channel_id', component: ChannelComponent }
+    { path: 'channel/:channel_id', component: ChannelComponent }
 ]
 
 @NgModule({

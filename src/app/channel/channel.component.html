@@ -3,3 +3,10 @@
         {{ channel_nm }}
     </a>
 </h1>
+<ul>
+    <li *ngFor="let video of video_list" >
+        <a routerLink="/video/{{video.video_id}}">
+            {{video.video_nm}}
+        </a>
+    </li>
+</ul>

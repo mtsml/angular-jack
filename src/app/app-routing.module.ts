@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+
 import { IndexComponent } from './index/index.component';
 import { ChannelComponent } from './channel/channel.component';
 import { VideoComponent } from './video/video.component';
+import { ChannelService } from './channel/channel.service';
+
 
 const routes: Routes = [
     { path: '', component: IndexComponent },
@@ -11,7 +15,13 @@ const routes: Routes = [
 ]
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    imports: [
+        HttpClientModule,
+        RouterModule.forRoot(routes)
+    ],
+    exports: [RouterModule],
+    providers: [
+        ChannelService
+    ]
 })
 export class AppRoutingModule { }

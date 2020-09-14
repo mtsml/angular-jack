@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Channel } from '../channel/Channel';
+import { ChannelService } from '../channel/channel.service';
+
 
 @Component({
   selector: 'app-heroes',
@@ -8,10 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
     title = 'おすすめYoutuber'
-    channel_list = [
-        {channel_id: 'UCutJqz56653xV2wwSvut_hQ', channel_nm: '東海オンエア'},
-        {channel_id: 'UCynIYcsBwTrwBIecconPN2A', channel_nm: '東海オンエアの控え室'}
-    ]
+    channel_list: Channel[];
+
+    constructor(
+        private channelService: ChannelService
+    ) { }
+
     ngOnInit(): void {
+        this.getChannelList();
+    }
+
+    getChannelList() {
+        this.channelService.getChannelList()
+            .subscribe(response => this.channel_list = response.channel_list)
     }
 }

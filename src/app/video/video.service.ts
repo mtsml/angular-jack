@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 
-type VideoInfo = {
+export type VideoInfo = {
     video_nm: string
 }
 

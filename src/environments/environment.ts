@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiurl: 'https://d19ptxif4m.execute-api.ap-northeast-1.amazonaws.com'
+  apiurl: 'mock'
 };
 
 /*

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Channel } from './Channel';
 import { Video } from '../video/Video';
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 
 type ChannelList = {

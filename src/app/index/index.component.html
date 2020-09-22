@@ -1,8 +1,10 @@
-<h1>{{title}}</h1>
-<ul>
-    <li *ngFor="let channel of channel_list" >
-        <a routerLink="/channel/{{channel.channel_id}}">
-            {{channel.channel_nm}}
-        </a>
-    </li>
-</ul>
+<div class="container">
+    <h1>{{title}}</h1>
+    <ul>
+        <li *ngFor="let channel of channel_list" >
+            <a routerLink="/channel/{{channel.channel_id}}">
+                {{channel.channel_nm}}
+            </a>
+        </li>
+    </ul>
+</div>

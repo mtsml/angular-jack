@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { InMemoryDataService } from './mock/in-memory-data.service'
 
 import { environment } from '../environments/environment'
@@ -23,6 +24,7 @@ import { VideoComponent } from './video/video.component';
         AppRoutingModule,
         BrowserModule,
         FormsModule,
+        MDBBootstrapModule.forRoot(),
         environment.production 
             ? [] 
             : HttpClientInMemoryWebApiModule.forRoot(
